@@ -27,6 +27,7 @@ interface Chat {
   id: number;
   name: string;
   status: string;
+  lastConnection: string;
   messages: Message[];
 }
 
@@ -35,6 +36,7 @@ const chats: Chat[] = [
     id: 1,
     name: "John Doe",
     status: "Online",
+    lastConnection: "2023-04-01T12:02:00Z",
     messages: [
       {
         id: 1,
@@ -57,12 +59,20 @@ const chats: Chat[] = [
         timestamp: "2023-04-01T12:02:00Z",
         read: true,
       },
+      {
+        id: 4,
+        senderId: 1,
+        text: "That's really good to hear!",
+        timestamp: "2023-04-01T14:48:00Z",
+        read: true,
+      },
     ],
   },
   {
     id: 2,
     name: "Jane Smith",
     status: "Offline",
+    lastConnection: "2023-04-01T19:07:00Z",
     messages: [
       {
         id: 1,
@@ -94,15 +104,35 @@ function formatDateTime(timestamp: string) {
   return format(date, "HH:mm");
 }
 
+function TopBar({ chat }: { chat: Chat }) {
+  return (
+    <div className="m-4 flex">
+      <div className="flex-1">
+        <FaRegCircleUser className="w-12 h-12 mx-auto my-auto" />
+      </div>
+      <div className="flex-11">
+        <h1>{chat.name}</h1>
+        <p className="font-light text-sm text-gray-500">
+          {chat.lastConnection}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function Message({ message }: { message: Message }) {
   const isCurrentUser = message.senderId === CURRENT_USER_ID;
   return (
-    <div className={`flex ${isCurrentUser ? "justify-start" : "justify-end"}`}>
+    <div className={`flex ${isCurrentUser ? "justify-end" : "justify-start"}`}>
       <div
         className={`mx-2 ${isCurrentUser ? MESSAGE_PRIMARY_COLOR : MESSAGE_SECONDARY_COLOR} text-end rounded-xl p-3 my-2 w-fit`}
       >
         <p className={`${FONT_PRIMARY_COLOR}`}>{message.text}</p>
-        {formatDateTime(message.timestamp)}
+        <p
+          className={`font-light text-sm ${isCurrentUser ? "text-green-950" : "text-gray-500"}`}
+        >
+          {formatDateTime(message.timestamp)}
+        </p>
       </div>
     </div>
   );
@@ -118,13 +148,23 @@ function ChatPanel({ chat }: { chat: Chat }) {
   );
 }
 
-function ChatListItem({ chat }: { chat: Chat }) {
+function ChatListItem({
+  chat,
+  setSelectedChat,
+}: {
+  chat: Chat;
+  setSelectedChat: (chat: Chat) => void;
+}) {
   const lastMessage = chat.messages[chat.messages.length - 1];
 
   const unreadMessages = chat.messages.filter((message) => !message.read);
 
   return (
-    <div key={chat.id} className={`flex mx-2`}>
+    <div
+      key={chat.id}
+      className={`flex mx-2`}
+      onClick={() => setSelectedChat(chat)}
+    >
       <div className="flex flex-2">
         <FaRegCircleUser className="w-12 h-12 mx-auto my-auto" />
       </div>
@@ -171,7 +211,11 @@ export default function WhatsAppClone() {
         <div className={`flex-2 ${DEFAULT_BORDER_STYLE}`}>Top Left Bar</div>
         <div className={`flex-10 ${DEFAULT_BORDER_STYLE} border-t-0`}>
           {chats.map((chat) => (
-            <ChatListItem chat={chat} key={chat.id} />
+            <ChatListItem
+              chat={chat}
+              setSelectedChat={setSelectedChat}
+              key={chat.id}
+            />
           ))}
         </div>
       </div>
@@ -179,7 +223,7 @@ export default function WhatsAppClone() {
       {/* Chat - Messages */}
       <div className={`flex-7 flex flex-col ${DEFAULT_BORDER_STYLE}`}>
         <div className={`flex-1 ${DEFAULT_BORDER_STYLE} border-l-0`}>
-          Chat Top Bar
+          <TopBar chat={selectedChat} />
         </div>
         <div
           className={`flex-11 ${DEFAULT_BORDER_STYLE} border-l-0 ${BG_SECONDARY_COLOR} p-8`}
