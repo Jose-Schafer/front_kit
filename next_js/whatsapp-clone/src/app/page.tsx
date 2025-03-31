@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { TbMessageFilled } from "react-icons/tb";
+import { HiOutlineStatusOnline } from "react-icons/hi";
+import { MdOutlineGroups } from "react-icons/md";
 import { format, parseISO } from "date-fns";
 
 const BG_PRIMARY_COLOR = "bg-[#202c32]";
@@ -12,6 +15,8 @@ const FONT_SECONDARY_COLOR = "text-[#33a884]";
 const FONT_TERTIARY_COLOR = "text-[#202c32]";
 const DEFAULT_FONT_STYLE = `font-mono font-black ${FONT_PRIMARY_COLOR}`;
 const DEFAULT_BORDER_STYLE = "border-1 border-solid border-[#2e3b40]";
+const SELECTED_ICON_BACKGROUND_COLOR = "bg-[#3c464c]";
+const ICON_COLOR = "text-[#aebac1]";
 
 const CURRENT_USER_ID = 1;
 
@@ -104,6 +109,30 @@ function formatDateTime(timestamp: string) {
   return format(date, "HH:mm");
 }
 
+function LeftBar() {
+  return (
+    <div className="w-fit mx-4 mt-4">
+      <div>
+        <div className={`p-2 rounded-full ${SELECTED_ICON_BACKGROUND_COLOR}`}>
+          <TbMessageFilled
+            className={`w-8 h-8 mx-auto my-auto ${ICON_COLOR}`}
+          />
+        </div>
+        <div className="mt-4">
+          <HiOutlineStatusOnline
+            className={`w-8 h-8 mx-auto my-auto ${ICON_COLOR}`}
+          />
+        </div>
+        <div className="mt-4">
+          <MdOutlineGroups
+            className={`w-8 h-8 mx-auto my-auto ${ICON_COLOR}`}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TopBar({ chat }: { chat: Chat }) {
   return (
     <div className="m-4 flex">
@@ -116,6 +145,16 @@ function TopBar({ chat }: { chat: Chat }) {
           {chat.lastConnection}
         </p>
       </div>
+    </div>
+  );
+}
+
+function TopLeftBar() {
+  return (
+    <div className="flex">
+      <h1>Chats</h1>
+      <input />
+      <div></div>
     </div>
   );
 }
@@ -162,23 +201,23 @@ function ChatListItem({
   return (
     <div
       key={chat.id}
-      className={`flex mx-2`}
+      className={`flex mr-4`}
       onClick={() => setSelectedChat(chat)}
     >
-      <div className="flex flex-2">
-        <FaRegCircleUser className="w-12 h-12 mx-auto my-auto" />
+      <div className="flex flex-1 mx-2">
+        <FaRegCircleUser className="w-10 h-10 mx-auto my-auto" />
       </div>
       <div
         className={`flex flex-10 flex-col ${DEFAULT_BORDER_STYLE} border-x-0 border-t-0 py-2`}
       >
-        <div className="flex flex-row-reverse">
+        <div className="flex justify-between">
+          <h1>{chat.name}</h1>
           <h1 className={`${FONT_SECONDARY_COLOR}`}>
             {formatDateTime(lastMessage.timestamp)}
           </h1>
         </div>
-
         <div className="flex justify-between">
-          <h1>{chat.name}</h1>
+          <h1 className="font-light text-gray-500">{lastMessage.text}</h1>
           {unreadMessages.length > 0 && (
             <div
               className={`rounded-full bg-[#33a884] ${FONT_TERTIARY_COLOR} flex items-center justify-center w-6 h-6`}
@@ -187,7 +226,6 @@ function ChatListItem({
             </div>
           )}
         </div>
-        <h1 className="font-light text-gray-500">{lastMessage.text}</h1>
       </div>
     </div>
   );
@@ -201,14 +239,16 @@ export default function WhatsAppClone() {
     >
       {/* Left Bar */}
       <div className={`flex-none ${DEFAULT_BORDER_STYLE} border-r-0`}>
-        Left Bar
+        <LeftBar />
       </div>
 
       {/* Chat List */}
       <div
         className={`flex-4 flex flex-col ${DEFAULT_BORDER_STYLE} border-r-0 ${BG_SECONDARY_COLOR}`}
       >
-        <div className={`flex-2 ${DEFAULT_BORDER_STYLE}`}>Top Left Bar</div>
+        <div className={`flex-2 ${DEFAULT_BORDER_STYLE}`}>
+          <TopLeftBar />
+        </div>
         <div className={`flex-10 ${DEFAULT_BORDER_STYLE} border-t-0`}>
           {chats.map((chat) => (
             <ChatListItem
