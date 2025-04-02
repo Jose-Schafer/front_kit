@@ -1,5 +1,17 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/navbar";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
+
+const titleFont = Inter({
+  variable: "--font-title",
+  subsets: ["latin"],
+});
+
+const bodyFont = Roboto({
+  variable: "--font-body",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={`${titleFont.variable} ${bodyFont.variable} antialiased`}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
