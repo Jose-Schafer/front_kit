@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+    --background: #f8f9fa;
+    --foreground: #ffffff; /* Cards */
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-inter: var(--font-title);
+    --font-roboto: var(--font-body);
+    --color-primary: #0d6efd; /* Buttons, Links, Highlights and interactive elements */
+    --color-secondary: #f8f9fa; /* Backgrounds, Sections, and large blocks of content */
+    --color-text: #212529; /* Body text, ensuring readability */
+    --color-accent: #495057; /* Headlines, borders and subtle dividers */
+    --color-success: #198754; /* Success messages, status indicators, or positive feedback */
+    --color-error: #dc3545; /* Error messages, warnings, or destructive actions */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+}
+
+h1 {
+    font-family: var(--font-title);
+}
