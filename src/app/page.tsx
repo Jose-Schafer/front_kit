@@ -46,27 +46,39 @@ export default function Page() {
         </p>
 
         <div className="flex justify-between font-semibold pb-16">
-          <Card gif="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/gifs/whatsapp-clone.gif">
-            <div className="text relative z-50">
-              <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
-                Whatsapp Clone
-              </h1>
-              <p className="font-normal text-base text-gray-50 relative my-4">
-                This card is for some special elements, like displaying
-                background gifs on hover only.
-              </p>
-              <Link href="/whatsapp-clone" className="text-white">
-                Whatsapp Clone
-              </Link>
-            </div>
-          </Card>
-          <div className="border-2 p-4 m-4 border-black">
-            <a
-              href="https://front-corfo-mod8-ep2-mmmhpf0qp-joseschafers-projects.vercel.app/"
-              className="text-primary"
+          <div className="mr-4">
+            <Card
+              href="/whatsapp-clone"
+              gifUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/gifs/whatsapp-clone.gif"
+              imageUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/imgs/whatsapp-clone.png"
             >
-              Aplicación Hospital
-            </a>
+              <div className="text relative z-50">
+                <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
+                  Whatsapp Clone
+                </h1>
+                <p className="font-normal text-base text-gray-50 relative my-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </Card>
+          </div>
+          <div>
+            <Card
+              href="https://front-corfo-mod8-ep2-1ls8kxqr5-joseschafers-projects.vercel.app/"
+              gifUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/gifs/whatsapp-clone.gif"
+              imageUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/imgs/whatsapp-clone.png"
+            >
+              <div className="text relative z-50">
+                <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
+                  Web Hospital
+                </h1>
+                <p className="font-normal text-base text-gray-50 relative my-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
