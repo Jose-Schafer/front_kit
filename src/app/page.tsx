@@ -49,8 +49,8 @@ export default function Page() {
           <div className="mr-4">
             <Card
               href="/whatsapp-clone"
-              gifUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/main/public/gifs/whatsapp-clone.gif"
-              imageUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/main/imgs/whatsapp-clone.png"
+              gifUrl="/gifs/whatsapp-clone.gif"
+              imageUrl="/imgs/whatsapp-clone.png"
             >
               <div className="text relative z-50">
                 <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
@@ -66,8 +66,8 @@ export default function Page() {
           <div>
             <Card
               href="https://front-corfo-mod8-ep2-1ls8kxqr5-joseschafers-projects.vercel.app/"
-              gifUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/main/public/gifs/hospital.gif"
-              imageUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/main/public/imgs/hospital.png"
+              gifUrl="/gifs/hospital.gif"
+              imageUrl="/imgs/hospital.png"
             >
               <div className="text relative z-50">
                 <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
