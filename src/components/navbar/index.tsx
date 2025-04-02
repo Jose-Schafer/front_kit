@@ -3,7 +3,6 @@ import Link from "next/link";
 const sections = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
-  { href: "/whatsapp-clone", label: "WhatsApp Clone" },
 ];
 
 export default function Navbar() {
