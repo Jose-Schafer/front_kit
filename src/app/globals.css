@@ -17,6 +17,17 @@
     --color-accent: #000000; /* Headlines, borders and subtle dividers */
     --color-success: #000000; /* Success messages, status indicators, or positive feedback */
     --color-error: #000000; /* Error messages, warnings, or destructive actions */
+
+    --animate-move: move 5s linear infinite;
+
+    @keyframes move {
+        0% {
+            transform: translateX(-200px);
+        }
+        100% {
+            transform: translateX(200px);
+        }
+    }
 }
 
 @media (prefers-color-scheme: light) {

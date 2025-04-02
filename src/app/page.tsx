@@ -46,7 +46,7 @@ export default function Page() {
         </p>
 
         <div className="flex justify-between font-semibold pb-16">
-          <Card gif="/gifs/whatsapp-clone.gif">
+          <Card gif="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/gifs/whatsapp-clone.gif">
             <div className="text relative z-50">
               <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
                 Whatsapp Clone
