@@ -1,9 +1,9 @@
 "use client";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 import { BackgroundBoxes } from "@/components/background-boxes";
 import { Card } from "@/components/card";
+import { MyTimeline } from "@/components/my-timeline";
 
 export default function Page() {
   return (
@@ -45,7 +45,7 @@ export default function Page() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
 
-        <div className="flex justify-between font-semibold pb-16">
+        <div className="flex justify-between pb-16">
           <div className="mr-4">
             <Card
               href="/whatsapp-clone"
@@ -109,6 +109,7 @@ export default function Page() {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <MyTimeline />
       </div>
 
       {/* Contact */}
