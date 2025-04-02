@@ -4,24 +4,24 @@ import { Timeline } from "@/components/ui/timeline";
 export function MyTimeline() {
   const data = [
     {
-      title: "2024",
+      title: "2022 - Hoy",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8">
+            Ingeniero de Software en Unholster.
           </p>
         </div>
       ),
     },
     {
-      title: "Early 2023",
+      title: "2020 - 2022",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8">
+            Desarrollador Python en área de investigación de Constructora
+            Geotécnica.
           </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-8">
             Lorem ipsum is for people who are too lazy to write copy. But we are
             not. Here are some more example of beautiful designs I built.
           </p>
@@ -29,27 +29,31 @@ export function MyTimeline() {
       ),
     },
     {
-      title: "Changelog",
+      title: "Estudios",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-4">
+            Universidad de Concepción
           </p>
           <div className="mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
+            <div className="flex gap-2 items-center text-neutral-700 text-xs md:text-sm">
+              ✅ Ingeniero Civil
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
+          </div>
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-4">
+            Corfo - USACH
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 text-xs md:text-sm">
+              ✅ Diplomado en Arquitectura Cloud
             </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
+          </div>
+          <p className="text-neutral-800 text-xs md:text-sm font-normal mb-4">
+            AWS
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 text-xs md:text-sm">
+              ✅ Certificación AWS - Cloud Practitioner
             </div>
           </div>
         </div>

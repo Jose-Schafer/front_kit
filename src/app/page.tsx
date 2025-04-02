@@ -50,7 +50,7 @@ export default function Page() {
             <Card
               href="/whatsapp-clone"
               gifUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/gifs/whatsapp-clone.gif"
-              imageUrl="https://raw.githubusercontent.com/Jose-Schafer/front_kit/refs/heads/feature/home-enhancements/public/imgs/whatsapp-clone.png"
+              imageUrl="/imgs/whatsapp-clone.png"
             >
               <div className="text relative z-50">
                 <h1 className="font-bold text-xl md:text-3xl text-gray-50 relative">
