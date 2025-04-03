@@ -87,7 +87,7 @@ export default function Page() {
             <div>
               <h3 className="text-xl font-semibold mb-2 text-text">Frontend</h3>
               <ul className="list-disc list-inside space-y-1 text-text">
-                <li>React / Next.js</li>
+                <li>React / Next.js / Vite</li>
                 <li>Tailwind CSS</li>
                 <li>HTML5, CSS3, JavaScript (ES6+)</li>
               </ul>
@@ -96,8 +96,7 @@ export default function Page() {
             <div>
               <h3 className="text-xl font-semibold mb-2 text-text">Backend</h3>
               <ul className="list-disc list-inside space-y-1 text-text">
-                <li>Node.js</li>
-                <li>Python</li>
+                <li>Django</li>
                 <li>API REST / GraphQL</li>
               </ul>
             </div>
@@ -119,9 +118,7 @@ export default function Page() {
               </h3>
               <ul className="list-disc list-inside space-y-1 text-text">
                 <li>Airflow</li>
-                <li>Spark</li>
-                <li>Pandas</li>
-                <li>Redshift</li>
+                <li>DBT</li>
               </ul>
             </div>
 
@@ -134,8 +131,7 @@ export default function Page() {
                 <li>Docker</li>
                 <li>Postman</li>
                 <li>
-                  Bases de datos relacionales (PostgreSQL, MySQL) y NoSQL
-                  (MongoDB)
+                  Bases de datos relacionales (PostgreSQL) y NoSQL (DynamoDB)
                 </li>
               </ul>
             </div>
