@@ -22,13 +22,12 @@ export default function Page() {
       <div className="mx-96 pt-16">
         <h1 className="text-2xl text-accent font-semibold pb-4">About me</h1>
         <p className="text-text pb-16">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Desarrollador de Software con experiencia en AWS e Ingeniería de
+          Datos. Construyo aplicaciones completas usando tecnologías como React,
+          Django y Python, y diseño soluciones en la nube con Lambda, S3, EC2,
+          StepFunctions, ECS y RDS. También desarrollo pipelines de datos
+          eficientes con herramientas como Airflow y DBT. Me enfoco en crear
+          sistemas escalables, limpios y orientados a datos.
         </p>
       </div>
 
@@ -36,15 +35,12 @@ export default function Page() {
       <div className="mx-96 pt-16">
         <h1 className="text-2xl text-accent font-semibold pb-4">Projects</h1>
         <p className="text-text pb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Aquí encontrarás una selección de proyectos en los que he trabajado,
+          enfocados en desarrollo Full Stack.
         </p>
+      </div>
 
+      <div className="mx-64 pt-16">
         <div className="flex justify-between pb-16">
           <div className="mr-4">
             <Card
@@ -86,15 +82,65 @@ export default function Page() {
       {/* Skills */}
       <div className="mx-96 pt-16">
         <h1 className="text-2xl text-accent font-semibold pb-4">Skills</h1>
-        <p className="text-text pb-16">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div className="p-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-text">Frontend</h3>
+              <ul className="list-disc list-inside space-y-1 text-text">
+                <li>React / Next.js</li>
+                <li>Tailwind CSS</li>
+                <li>HTML5, CSS3, JavaScript (ES6+)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-text">Backend</h3>
+              <ul className="list-disc list-inside space-y-1 text-text">
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>API REST / GraphQL</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-text">
+                DevOps & Cloud
+              </h3>
+              <ul className="list-disc list-inside space-y-1 text-text">
+                <li>AWS (Lambda, S3, EC2, RDS, API Gateway)</li>
+                <li>Vercel (despliegue y hosting)</li>
+                <li>CI/CD, serverless architectures</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-text">
+                Ingeniería de Datos
+              </h3>
+              <ul className="list-disc list-inside space-y-1 text-text">
+                <li>Airflow</li>
+                <li>Spark</li>
+                <li>Pandas</li>
+                <li>Redshift</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-text">
+                Otras herramientas
+              </h3>
+              <ul className="list-disc list-inside space-y-1 text-text">
+                <li>Git / GitHub</li>
+                <li>Docker</li>
+                <li>Postman</li>
+                <li>
+                  Bases de datos relacionales (PostgreSQL, MySQL) y NoSQL
+                  (MongoDB)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Experience */}
